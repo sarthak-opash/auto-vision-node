@@ -22,6 +22,7 @@ app.use(express.json({ limit: '20mb' }));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/auth', require('./routes/auth'));
 app.use('/api/data', require('./routes/data'));
+app.use('/data', require('./routes/data'));
 
 // Database Connection
 mongoose.connect(process.env.MONGODB_URI)
